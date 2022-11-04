@@ -3,16 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .logoDiv{
     display: flex;
     align-items: center;
 }
 
 .logo{
-    transition: 0.3s ease;
+    transition: 0.09s ease;
     justify-self: start;
 }
-.logo:hover{
+.logo:active{
     transform: scale(0.9);
 }
 .header{
@@ -56,5 +57,13 @@
 }
 .cartWidget:active{
     transform: scale(0.8);
-    
+}
+
+.greeting{
+    text-align: center;
+    padding: 1rem;
+    width: 50%;
+    margin: 3rem auto;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
 }
