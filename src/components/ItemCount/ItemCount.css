@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.containerItem{
+    margin: auto;
+    padding: 1rem;
+    background-color: rgb(248, 247, 247);
+    border-radius: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.containerCount{
+    margin: 0.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.containerCount button{
+    margin: 1rem;
+    width: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    transition: all 0.2s step-end;
+}
+.containerCount button:active{
+    background-color: white;
+
+}
+
+.containerCount p{
+    font-weight: bolder;
+    margin: 0;
+}
+.btAgrega{
+    padding: 1rem;
+    color: rgb(137, 137, 225);
+    border: 1px rgb(137, 137, 225);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+.btAgrega:hover{
+    background-color: white;
+}
