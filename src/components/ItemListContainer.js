@@ -19,7 +19,7 @@ function ItemListContainer({greetings = "Bienvenidos a la tienda!"}){
     return(
         <>
         <h1 className="greeting">{greetings}</h1>
-        <ItemCount stock={8} initial={1} onAdd={onAdd} />
+        <ItemCount initial={1} onAdd={onAdd} />
         <ToastContainer />
         </>
     );
