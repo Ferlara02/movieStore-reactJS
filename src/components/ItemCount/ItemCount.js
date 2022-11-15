@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./ItemCount.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const ItemCount = ({initial, onAdd}) =>{
+const ItemCount = ({initial, onAdd, stock}) =>{
 
-    const [stock, setStock] = useState(8);
+    const [stock2, setStock2] = useState(stock);
 
     const [count, setCount] = useState(initial);
 
@@ -13,12 +13,12 @@ const ItemCount = ({initial, onAdd}) =>{
     }
 
     const suma = ()=>{
-        if(stock > count) { setCount(count + 1);}
+        if(stock2 > count) { setCount(count + 1);}
     }
     const agregaAlCarrito = ()=>{
-        if(stock >= count){
+        if(stock2 >= count){
             onAdd(count);
-            setStock(stock - count);
+            setStock2(stock2 - count);
             setCount(1);
         }else{
             toast.error('No hay más stock!', {
@@ -37,8 +37,8 @@ const ItemCount = ({initial, onAdd}) =>{
     return(
         <>
         <div className="containerItem">
-            <h1>Pelicula</h1>
-            <p>Stock: {stock}</p>
+            <p>Blu-ray</p>
+            <p>Stock: {stock2}</p>
             <div className="containerCount">
                 <button className="bt-" onClick={resta}> - </button>
                 <p> {count} </p>

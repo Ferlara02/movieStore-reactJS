@@ -68,3 +68,10 @@
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     border-radius: 18px;
 }
+.main{
+    display: flex;
+    justify-content: center;
+}
+.spinner{
+    margin-top: 3rem;
+}
