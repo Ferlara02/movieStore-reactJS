@@ -33,11 +33,10 @@ const ItemCount = ({initial, onAdd, stock}) =>{
             }); 
         }
     }
-
+    
     return(
         <>
         <div className="containerItem">
-            <p>Blu-ray</p>
             <p>Stock: {stock2}</p>
             <div className="containerCount">
                 <button className="bt-" onClick={resta}> - </button>

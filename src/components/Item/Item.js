@@ -1,30 +1,19 @@
 import "./Item.css";
-import ItemCount from "../ItemCount/ItemCount.js";
-import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
+import {Link} from "react-router-dom";
 const Item = ({pelicula}) => {
-    const onAdd = (count)=>{
-        toast.success('Producto agregado al carrito', {
-            position: "bottom-right",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
-        console.log(`Se agregaron ${count} al carrito`)
-    }
+    
     return (
         <>
-        <div className="itemMovie">
-            <img src={pelicula.img} className="posterMovie" />
-            <li>{pelicula.name}</li>
-            <ItemCount initial={1} onAdd={onAdd} stock={pelicula.stock} />
-        </div>
-
-        <ToastContainer />
+        <Link className="link" to={pelicula.link} >
+            <div className="itemMovie">
+                <img src={pelicula.img} className="posterMovie" />
+                <li>{pelicula.name}</li>
+                <p>Calidad: Blu - ray</p>
+                <p>Precio: ${pelicula.price}</p>
+            </div>
+        </Link>
         </>
     )
 }

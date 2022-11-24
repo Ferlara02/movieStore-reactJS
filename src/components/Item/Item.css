@@ -1,5 +1,6 @@
 .itemMovie{
     width: 15rem;
+    height: 20rem;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;

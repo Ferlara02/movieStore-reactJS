@@ -1,16 +1,14 @@
-
-import Menu from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import './styles.css';
+import Layout from "./components/layout";
 
 
 function App() {
   return (
     <div className="App">
-      <Menu/>
-      <ItemListContainer/>
-
-      
+      <Layout>
+        <ItemListContainer/>
+      </Layout>
     </div>
   );
 }

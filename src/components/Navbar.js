@@ -5,27 +5,27 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from './CartWidget';
 import { Logo } from "../assets/logo";
+import {Link} from "react-router-dom";
 
 function Menu() {
     return (
         <Navbar className="header" expand="md">
             <Container>
                 <CartWidget/>
-                <Navbar.Brand className="logoDiv" href="#home"> <Logo className="logo" /> Movie Store </Navbar.Brand>
+                <Link className="logoDiv" to="/"> <Logo className="logo" /> Movie Store </Link>
                 <Navbar.Toggle className="toggler" aria-controls="basic-navbar-nav" />
                 
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav" className='me'>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Estrenos</Nav.Link>
-                        <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Drama</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
-                            Romance
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Noir</NavDropdown.Item>
+                        <Link to="/" className="navItem">Home</Link>
+                        <Link href="#link" className="navItem">Estrenos</Link>
+                        <NavDropdown title="Categorías" id="basic-nav-dropdown" className='dropdown'>
+                            <Link to="/category/drama" className="navItem">Drama</Link>
+                            <Link to="/category/romance" className="navItem">
+                                Romance
+                            </Link>
+                            <Link to="/category/sci-fi" className="navItem">Sci - Fi</Link>
                         </NavDropdown>
-                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
