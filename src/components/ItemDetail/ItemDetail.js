@@ -19,6 +19,9 @@ function ItemDetail({detailPeliculas}){
     return(
         <>
         <div className="itemDetail">
+            <div className="backgroundIMG">
+                <img src={detailPeliculas.background} />
+            </div>
             <div className="posterAndTitle">
                <img src={detailPeliculas.img} className="posterMovie2"/>
                <h1> {detailPeliculas.name} </h1>

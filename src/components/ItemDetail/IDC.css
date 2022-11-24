@@ -1,18 +1,72 @@
-.itemDetail{
-    
-    width: 100%;
-    background-color: rgb(248, 247, 247);
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap !important;
+@media (min-width: 568px) { 
+    .itemDetail{
+        width: 100%;
+        background-color: rgb(248, 247, 247);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "img img"
+                            "title desc";
+        justify-content: center;
+        align-items: center;
+    }
+    .backgroundIMG img{
+        width: 100vw;
+        height: 25vw;
+        object-fit: cover;
+    }
+    .posterAndTitle{
+        grid-area: title;
+        justify-self: center;
+    }
+    .descriptionAndItemcount{
+        width: 60%;
+        justify-self: center;
+    }
+
 }
+@media (max-width: 567px){
+    .itemDetail{
+        width: 100%;
+        background-color: rgb(248, 247, 247);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "img"
+                            "title"
+                            "desc";
+        justify-content: center;
+        align-items: center;
+    }
+    .backgroundIMG img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+    .posterAndTitle{
+        grid-area: title;
+        justify-self: center;
+    }
+    .descriptionAndItemcount{
+        padding: 1rem;
+    }
+    
+}
+.itemDetail{
+    padding-bottom: 1rem;
+}
+.posterAndTitle, .descriptionAndItemcount{
+    padding-top: 1rem;
+}
+
 .posterMovie2{
     width: 180px;
 }
-
+.backgroundIMG{
+    grid-area: img;
+    max-width: 100%;
+}
 .descriptionAndItemcount{
-    width: 230px;
+    grid-area: desc;
+    justify-self: center;
 }
