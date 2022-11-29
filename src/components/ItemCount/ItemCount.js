@@ -9,7 +9,7 @@ const ItemCount = ({initial, onAdd, stock}) =>{
     const [count, setCount] = useState(initial);
 
     const resta = ()=>{
-        if(count > 1) { setCount(count -1); }
+        if(count > 1) { setCount(count - 1); }
     }
 
     const suma = ()=>{

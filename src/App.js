@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Layout>
         <div className="portadaIndex">
-          <h1>Reivindiquemos las películas en CD.</h1>
+          <h1>Reivindiquemos la colección.</h1>
           <img className="cd" src={beforesunset}/>
         </div>
         <h2 className="h2">Productos</h2>
