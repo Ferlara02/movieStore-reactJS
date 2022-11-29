@@ -21,11 +21,13 @@ function ItemListContainer(){
             if(genre){
                 const genres = data.filter((pelicula)=> pelicula.genre === genre);
                 setPeliculas2(genres);
+                
             }else {
                 setPeliculas2(data);
             }
         })
-        .then((data) => {
+        
+        .then(() => {
             setHayPeliculas(true);
         })
     }, [genre]);
@@ -33,9 +35,10 @@ function ItemListContainer(){
     return(
         <>
         <div className="main">
+            
             {!hayPeliculas ? 
-                <Spinner className="spinner" animation="border" role="status"><span className="visually-hidden">Loading...</span>
-                </Spinner> : <ItemList peliculas2={peliculas2} />
+                <div className="spinner"><Spinner animation="border" role="status"><span className="visually-hidden">Loading...</span>
+                </Spinner></div> : <ItemList peliculas2={peliculas2} />
             }
         </div>
         </>

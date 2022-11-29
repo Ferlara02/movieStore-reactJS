@@ -52,6 +52,9 @@
     }
     
 }
+.posterAndTitle p{
+    margin: 0;
+}
 .itemDetail{
     padding-bottom: 1rem;
 }

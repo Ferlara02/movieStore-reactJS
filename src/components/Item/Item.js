@@ -10,8 +10,8 @@ const Item = ({pelicula}) => {
             <div className="itemMovie">
                 <img src={pelicula.img} className="posterMovie" />
                 <li>{pelicula.name}</li>
-                <p>Calidad: Blu - ray</p>
-                <p>Precio: ${pelicula.price}</p>
+                <p>Calidad: Blu-Ray</p>
+                <p className="price">Precio: ${pelicula.price}</p>
             </div>
         </Link>
         </>

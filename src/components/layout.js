@@ -10,7 +10,7 @@ const Layout = ({children}) => {
         </main>
         <footer>
             <div className="separador" />
-            <p>Todos los derechos reservados: Fernando Lara.</p>
+            <p>&#169; 2022 Fernando Lara.</p>
         </footer>
         </>
     )

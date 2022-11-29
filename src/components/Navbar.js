@@ -25,6 +25,9 @@ function Menu() {
                                 Romance
                             </Link>
                             <Link to="/category/sci-fi" className="navItem">Sci - Fi</Link>
+                            <Link to="/category/terror" className="navItem">
+                                Terror
+                            </Link>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

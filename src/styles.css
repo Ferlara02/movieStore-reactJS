@@ -7,6 +7,13 @@
 main{
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+main h2{
+    text-align: center;
+    font-weight: 800;
 }
 .logoDiv{
     display: flex;
@@ -26,7 +33,7 @@ main{
     background-color: whitesmoke;
 }
 .navItem{
-    padding: 0.2rem;
+    padding: 0.5rem;
     border-radius: 0.2rem;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -42,13 +49,36 @@ main{
 }
 .navbar-nav{
     display: flex;
-    align-items: center;
 }
 
 @media (min-width: 768px) {
     .cartWidget{
         margin-right: 3rem;
     }
+}
+.portadaIndex{
+    display: flex;
+    padding: 2rem 0.3rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(./assets/yiyiBCKG.png);
+    background-size: cover;
+}
+.cd{
+    width: 170px;
+}
+.portadaIndex h1{
+    width: 50%;
+    font-weight: 900;
+    margin: 0.5rem;
+    font-size: 5vw;
+    text-align: start;
+    color: white;
+}
+.h2{
+    margin-top: 3rem;
+    font-weight: bolder;
 }
 .cartWidget{
     display: flex;
@@ -103,11 +133,9 @@ footer p{
     padding-top: 1rem;
 }
 
-.main{
+
+.spinner {
     display: flex;
     justify-content: center;
-    
-}
-.spinner{
-    margin-top: 3rem;
-}
+    margin: 2rem;
+  }

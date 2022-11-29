@@ -1,12 +1,17 @@
 import ItemListContainer from "./components/ItemListContainer";
 import './styles.css';
 import Layout from "./components/layout";
-
+import beforesunset from "./assets/beforesunset.png";
 
 function App() {
   return (
     <div className="App">
       <Layout>
+        <div className="portadaIndex">
+          <h1>Reivindiquemos las películas en CD.</h1>
+          <img className="cd" src={beforesunset}/>
+        </div>
+        <h2 className="h2">Productos</h2>
         <ItemListContainer/>
       </Layout>
     </div>

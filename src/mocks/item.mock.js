@@ -59,4 +59,41 @@ export const peliculas = [
       link: "/item/5",
       price: 4000 
    },
+   {
+      id: 6,
+      name: "X (2022)",
+      description: "En 1979, un equipo de cineastas intenta grabar una película para adultos en una zona rural de Texas. Sin embargo, cuando los dueños de casa los atrapa, deberán luchar por sobrevivir.",
+      director: "Ti West",
+      genre: "terror",
+      background: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/02/X-poster-scaled.jpg?fit=2560%2C1465&ssl=1",
+      img: "https://d135u4jtzauizi.cloudfront.net/X_Poster_A24.jpg",
+      stock: 5,
+      link: "/item/6",
+      price: 8000 
+   },
+   {
+      id: 7,
+      name: "Pearl (2022)",
+      description: "En la remota granja de su familia, Pearl debe cuidar a su padre enfermo bajo la estricta supervisión de su religiosa madre. Ella sueña con una vida lejos de allí, similar a la de las estrellas de cine, pero vive en un ambiente opresor y aterrador.",
+      director: "Ti West",
+      genre: "terror",
+      background: "https://m.media-amazon.com/images/M/MV5BYTUwMmIzMmMtYzljNy00MWRkLTk0NTktNTM5MmU4MzJlMGNjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      img: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/07/pearl-poster.png?ssl=1",
+      stock: 10,
+      link: "/item/7",
+      price: 10000 
+   },
+   {
+      id: 8,
+      name: "Bones and all (2022)",
+      description: "El amor florece entre una joven marginada de la sociedad y un vagabundo sin derechos cuando se embarcan en una odisea de 3.000 millas a través de las carreteras secundarias de América.",
+      director: "Luca Guadagnino",
+      genre: "romance",
+      background: "https://www.thewrap.com/wp-content/uploads/2022/09/Bones-and-All.jpg",
+      img: "https://m.media-amazon.com/images/M/MV5BMzk3Zjg4YmQtMzQyZi00ZDg3LWJhZjYtNmQ0MTE3NzIyNGYyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      stock: 10,
+      link: "/item/8",
+      price: 10000 
+   },
+
 ];

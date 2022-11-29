@@ -26,8 +26,8 @@ function ItemDetailContainer(){
 
     return (
         !hayPeliculas ? 
-            <Spinner className="spinner" animation="border" role="status"><span className="visually-hidden">Loading...</span>
-            </Spinner> : <ItemDetail detailPeliculas={detailPeliculas} />
+            <div className="spinner"><Spinner animation="border" role="status"><span className="visually-hidden">Loading...</span>
+            </Spinner></div> : <ItemDetail detailPeliculas={detailPeliculas} />
          
        
     )

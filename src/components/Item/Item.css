@@ -1,3 +1,8 @@
+
+.link{
+    height: 20rem;
+}
+
 .itemMovie{
     position: relative;
     width: 15rem;
@@ -8,16 +13,22 @@
     align-items: center;
     background-color: rgb(248, 247, 247);
     border-radius: 10px;
+    border: 1px solid white;
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
+.itemMovie p{
+    margin: 0;
+    font-size: 0.9rem;
+}
 .itemMovie:hover{
     content: "";
-    
     background: linear-gradient(
         45deg, rgb(248, 247, 247), rgba(160, 160, 228, 0.57), rgb(248, 247, 247), rgba(166, 166, 237, 0.57)
     );
     background-size: 800%;
+    border: 1px solid rgba(160, 160, 228, 0.57);
     border-radius: 10px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     animation: glowing 20s linear infinite;
@@ -42,3 +53,13 @@ li{
     font-weight: bolder;
     font-size: larger;
 }
+.price{
+    width: 60%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(160, 160, 228, 0.57);
+    font-size: 1.2rem;
+}
+
+
