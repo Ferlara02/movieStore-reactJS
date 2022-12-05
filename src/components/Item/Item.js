@@ -6,7 +6,7 @@ const Item = ({pelicula}) => {
     
     return (
         <>
-        <Link className="link" to={pelicula.link} >
+        <Link className="link" to={pelicula.link}>
             <div className="itemMovie">
                 <img src={pelicula.img} className="posterMovie" />
                 <li>{pelicula.name}</li>

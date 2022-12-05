@@ -52,16 +52,3 @@
     font-weight: bolder;
     margin: 0;
 }
-.btAgrega{
-    padding: 1rem;
-    color: rgb(137, 137, 225);
-    border: 1px rgb(137, 137, 225);
-    border-radius: 1rem;
-    transition: all 0.1s ease;
-}
-.btAgrega:hover{
-    background-color: white;
-}
-.btAgrega:active{
-    transform: scale(0.92);
-}

@@ -25,6 +25,40 @@
     }
 
 }
+.btAgrega{
+    padding: 1rem;
+    color: rgb(137, 137, 225);
+    border: 1px rgb(137, 137, 225);
+    border-radius: 1rem;
+    transition: all 0.1s ease;
+    width: 100%;
+}
+.btAgrega:disabled{
+    background-color: white;
+}
+.btAgrega:disabled:active{
+    transform: none;
+}
+.btAgrega:hover, .btFinaliza:hover{
+    background-color: white;
+}
+.btFinaliza:hover{
+    color: rgb(137, 137, 225);
+}
+.btAgrega:active, .btFinaliza:active{
+    transform: scale(0.92);
+}
+.btFinaliza{
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: rgb(137, 137, 225);
+    color: white;
+    border: 1px rgb(137, 137, 225);
+    border-radius: 1rem;
+    transition: all 0.1s ease;
+    width: 100%;
+}
+
 @media (max-width: 567px){
     .itemDetail{
         width: 100%;
