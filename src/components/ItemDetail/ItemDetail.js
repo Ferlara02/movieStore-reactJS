@@ -1,13 +1,16 @@
 import "./IDC.css"
 import ItemCount from "../ItemCount/ItemCount";
 import { ToastContainer, toast } from 'react-toastify';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-function ItemDetail({detailPeliculas}){
+import { Context } from "../../context/cartContext";
+function ItemDetail({movie}){
     const navigate = useNavigate();
-    const [stock, setStock] = useState(detailPeliculas.stock);
+    const [stock, setStock] = useState(movie.stock);
     const [count, setCount] = useState(1);
-    
+
+    const {addMovie} = useContext(Context);
+
     const resta = ()=>{
         if(count > 1) { setCount(count - 1); }
     }
@@ -18,6 +21,7 @@ function ItemDetail({detailPeliculas}){
         if(stock >= count){
             onAdd(count);
             setStock(stock - count);
+            addMovie(movie, count);
             setCount(1);
         }else{
             toast.error('No hay más stock!', {
@@ -52,17 +56,17 @@ function ItemDetail({detailPeliculas}){
         <>
         <div className="itemDetail">
             <div className="backgroundIMG">
-                <img src={detailPeliculas.background} />
+                <img src={movie.background} />
             </div>
             <div className="posterAndTitle">
-               <img src={detailPeliculas.img} className="posterMovie2"/>
-               <h1> {detailPeliculas.name} </h1>
-               <p>Género: {detailPeliculas.genre}</p>
-               <p>Director: {detailPeliculas.director}</p>
+               <img src={movie.img} className="posterMovie2"/>
+               <h1> {movie.name} </h1>
+               <p>Género: {movie.genre}</p>
+               <p>Director: {movie.director}</p>
             </div>
             <div className="descriptionAndItemcount">
-                <p>{detailPeliculas.description}</p>
-                <p>Precio: ${detailPeliculas.price}</p>
+                <p>{movie.description}</p>
+                <p>Precio: ${movie.price}</p>
                 {stock > 0 ? (<ItemCount count={count} suma={suma} resta={resta} stock={stock}/>): (<p>No hay mas stock!</p>) }
                 
                 <button className="btAgrega" onClick={agregaAlCarrito} disabled={stock === 0}>Agregar al carrito</button>

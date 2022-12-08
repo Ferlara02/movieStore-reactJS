@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 
 function ItemDetailContainer(){
-    const [detailPeliculas, setDetailPeliculas] = useState({});
+    const [movie, setMovie] = useState(null);
     const [hayPeliculas, setHayPeliculas] = useState(false);
     const {id} = useParams();
 
@@ -17,7 +17,7 @@ function ItemDetailContainer(){
         }, 2000))
             .then((data) => {
                 const movie = data.find((pelicula) => pelicula.id === parseInt(id));
-                setDetailPeliculas(movie);
+                setMovie(movie);
             })
             .then((data) => {
                 setHayPeliculas(!data);
@@ -27,7 +27,7 @@ function ItemDetailContainer(){
     return (
         !hayPeliculas ? 
             <div className="spinner"><Spinner animation="border" role="status"><span className="visually-hidden">Loading...</span>
-            </Spinner></div> : <ItemDetail detailPeliculas={detailPeliculas} />
+            </Spinner></div> : <ItemDetail movie={movie} />
          
        
     )

@@ -2,7 +2,7 @@ import "./Item.css";
 
 import 'react-toastify/dist/ReactToastify.css';
 import {Link} from "react-router-dom";
-const Item = ({pelicula}) => {
+const Item = ({pelicula, cantAgregada}) => {
     
     return (
         <>
@@ -11,7 +11,7 @@ const Item = ({pelicula}) => {
                 <img src={pelicula.img} className="posterMovie" />
                 <li>{pelicula.name}</li>
                 <p>Calidad: Blu-Ray</p>
-                <p className="price">Precio: ${pelicula.price}</p>
+                <p className="price">Precio: ${pelicula.price * cantAgregada}</p>
             </div>
         </Link>
         </>
