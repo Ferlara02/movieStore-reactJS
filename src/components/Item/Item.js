@@ -8,11 +8,14 @@ const Item = ({pelicula, cantAgregada}) => {
         <>
         <Link className="link" to={pelicula.link}>
             <div className="itemMovie">
-                <img src={pelicula.img} className="posterMovie" />
+                <div className="posterDiv">
+                    <img src={pelicula.img} className="posterMovie" />
+                </div>
                 <li>{pelicula.name}</li>
                 <p>Calidad: Blu-Ray</p>
-                <p>Cantidad: {cantAgregada}</p>
-                <p className="price">Precio: ${pelicula.price * cantAgregada}</p>
+                <p>{cantAgregada ? "Cantidad" : "En Stock"}:{" "}
+                             {cantAgregada || pelicula.stock}</p>
+                <p className="price">Precio: ${cantAgregada ? pelicula.price * cantAgregada : pelicula.price}</p>
             </div>
         </Link>
         </>

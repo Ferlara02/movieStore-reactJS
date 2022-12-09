@@ -44,6 +44,10 @@
         background-position: 0 0;
     }
 }
+.posterDiv{
+    height: 19rem;
+    display: flex;
+}
 .posterMovie{
     width: 120px;
     border-radius: 0.5rem;

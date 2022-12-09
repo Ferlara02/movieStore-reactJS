@@ -5,7 +5,7 @@ const ItemList = ({peliculas2}) => {
     return(
         <ul className="itemList">
             {peliculas2.map((pelicula) => (
-                <Item pelicula={pelicula} cantAgregada = {1}/>    
+                <Item pelicula={pelicula}/>    
             ))}
         </ul>
     )
