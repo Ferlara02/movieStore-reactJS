@@ -33,10 +33,11 @@
     transition: all 0.1s ease;
     width: 100%;
 }
-.btAgrega:disabled{
-    background-color: white;
+.btAgrega:disabled, .btFinaliza:disabled{
+    background-color: gray;
+    color: white;
 }
-.btAgrega:disabled:active{
+.btAgrega:disabled:active, .btFinaliza:disabled:active{
     transform: none;
 }
 .btAgrega:hover, .btFinaliza:hover{
@@ -57,6 +58,10 @@
     border-radius: 1rem;
     transition: all 0.1s ease;
     width: 100%;
+}
+.btAgrega:disabled:hover, .btFinaliza:disabled:hover{
+    background-color: gray;
+    color: white;
 }
 
 @media (max-width: 567px){

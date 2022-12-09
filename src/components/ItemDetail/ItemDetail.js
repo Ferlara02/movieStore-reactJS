@@ -9,7 +9,7 @@ function ItemDetail({movie}){
     const navigate = useNavigate();
     const [stock, setStock] = useState(movie.stock);
     const [count, setCount] = useState(1);
-    
+   
     const resta = ()=>{
         if(count > 1) { setCount(count - 1); }
     }
@@ -69,7 +69,7 @@ function ItemDetail({movie}){
                 {stock > 0 ? (<ItemCount count={count} suma={suma} resta={resta} stock={stock}/>): (<p>No hay mas stock!</p>) }
                 
                 <button className="btAgrega" onClick={agregaAlCarrito} disabled={stock === 0}>Agregar al carrito</button>
-                <button className="btFinaliza" onClick={handleCart}>Finalizar Compra</button>
+                <button disabled={!isInCart(movie.id)} className="btFinaliza" onClick={handleCart}>Finalizar Compra</button>
             </div>
         </div>
         <ToastContainer />

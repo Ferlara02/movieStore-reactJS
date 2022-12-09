@@ -147,6 +147,7 @@ footer p{
 }
 .container{
     width: 100%;
+    position: relative;
 }
 .movieContainer{
     display: flex;
@@ -187,7 +188,7 @@ footer p{
     font-size: larger;
     font-weight: bolder;
 }
-.finCompra button{
+.finCompra .button{
     padding: 1rem;
     margin: 1rem auto;
     background-color: rgb(137, 137, 225);
@@ -197,15 +198,48 @@ footer p{
     transition: all 0.1s ease;
     width: 60%;
 }
-.finCompra button:hover{
+.finCompra .button:hover{
     background-color: white;
     color: rgb(137, 137, 225);
     border: 1px solid rgb(137, 137, 225);
 }
-
+.clear{
+    position: fixed;
+    z-index: 1;
+    right: 3%;
+    top: 90%;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 0, 0, 0.674);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.4s all ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clear svg{
+    margin: 0.5rem;
+}
+.textClear{
+    height: 100%;
+    display: block;
+    transition: 0.5s all ease;
+    align-self: center;
+    margin: auto;
+    padding: 0 0.3rem 0 0;
+}
+.hidden{
+    display: none;
+    transition: 0.4s all ease;
+}
+.botonesCart{
+    display: flex;
+}
 /**** FIN CART ***/
 .spinner {
     display: flex;
     justify-content: center;
     margin: 2rem;
-  }
+}
+
