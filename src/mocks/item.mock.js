@@ -95,5 +95,54 @@ export const peliculas = [
       link: "/item/8",
       price: 10000 
    },
+   {
+      id: 9,
+      name: "The Shining",
+      description: "Jack Torrance se convierte en cuidador de invierno en el Hotel Overlook, con la esperanza de vencer su bloqueo con la escritura. Se instala allí junto con su esposa y su hijo, que está plagado de premoniciones. Mientras la escritura no fluye y las visiones de Danny se vuelven más preocupantes, Jack descubre oscuros secretos del hotel y comienza a convertirse en un maníaco homicida, empeñado en aterrorizar a su familia.",
+      director: "Stanley Kubrick",
+      genre: "terror",
+      background: "https://www.robleeper.com/imager/image/assets/img/blog/330/the-shining-wallpaper-preview_453f976d46f2777035a7291b08d9f5fc.jpg",
+      img: "https://i.pinimg.com/736x/6d/46/53/6d46538d11c47f18bab0c7a8ca7810cd.jpg",
+      stock: 8,
+      link: "/item/9",
+      price: 13000 
+   },
+   {
+      id: 10,
+      name: "Autumn Sonata",
+      description: "Una lucha emocional emerge cuando una exitosa pianista se reúne con su hija, de quien estuvo alejada por largo tiempo. Bergman retrata en esta película el enfrentamiento entre madre e hija, mientras a su alrededor pululan los fantasmas del pasado, la incomunicación y la muerte.",
+      director: "Ingmar Bergman",
+      genre: "drama",
+      background: "https://www.filmlinc.org/wp-content/uploads/2015/07/autumnsonata3-1600x900-c-default.jpg",
+      img: "https://cdn.shopify.com/s/files/1/1057/4964/products/Autumn-Sonata-Vintage-Movie-Poster-Original-1-Sheet-27x41.jpg?v=1651640514",
+      stock: 5,
+      link: "/item/10",
+      price: 10000 
+   },
+   {
+      id: 11,
+      name: "Eternal sunshine",
+      description: "Parecían la pareja ideal, su primer encuentro fue mágico, pero con el paso del tiempo ella deseó nunca haberlo conocido. Su anhelo se hace realidad gracias a un polémico y radical invento. Sin embargo descubrirán que el destino no se puede controlar.",
+      director: "Michel Gondry",
+      genre: "romance",
+      background: "https://i0.wp.com/www.vozactual.com/wp-content/uploads/2019/12/1234567.jpg?fit=800%2C445&ssl=1",
+      img: "https://http2.mlstatic.com/D_NQ_NP_997608-MLM31220162618_062019-W.jpg",
+      stock: 8,
+      link: "/item/11",
+      price: 8000 
+   },
+   {
+      id: 12,
+      name: "Blade Runner (1982)",
+      description: "Rick Deckard, un policía especializado en cazar replicantes. Los replicantes son algo así como robots biológicos, seres humanos artificiales, creados para cumplir las tareas que los hombres ya no quieren hacer, en lugares donde se necesita una mayor mano de obra.",
+      director: "Ridley Scott",
+      genre: "sci-fi",
+      background: "https://images8.alphacoders.com/874/874022.jpg",
+      img: "https://http2.mlstatic.com/D_NQ_NP_842207-MLA26405185248_112017-O.jpg",
+      stock: 12,
+      link: "/item/12",
+      price: 5000 
+   },
+   
 
 ];
