@@ -1,16 +1,15 @@
 import "./IDC.css"
 import ItemCount from "../ItemCount/ItemCount";
 import { ToastContainer, toast } from 'react-toastify';
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../context/cartContext";
 function ItemDetail({movie}){
+    const {addMovie, isInCart, carrito} = useContext(Context);
     const navigate = useNavigate();
     const [stock, setStock] = useState(movie.stock);
     const [count, setCount] = useState(1);
-
-    const {addMovie} = useContext(Context);
-
+    
     const resta = ()=>{
         if(count > 1) { setCount(count - 1); }
     }
@@ -20,8 +19,8 @@ function ItemDetail({movie}){
     const agregaAlCarrito = ()=>{
         if(stock >= count){
             onAdd(count);
-            setStock(stock - count);
             addMovie(movie, count);
+            setStock(stock - count);
             setCount(1);
         }else{
             toast.error('No hay más stock!', {

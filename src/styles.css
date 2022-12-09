@@ -172,14 +172,14 @@ footer p{
     transition: 0.2s all ease;
 }
 .aside button:hover{
-    opacity: 0.8;
+    opacity: 0.6;
     transform: scale(1.1);
 }
 .finCompra{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 1rem ;
+    margin: 1rem 0;
     text-align: center;
 }
 .finCompra p{
@@ -192,10 +192,15 @@ footer p{
     margin: 1rem auto;
     background-color: rgb(137, 137, 225);
     color: white;
-    border: 1px rgb(137, 137, 225);
+    border: 1px solid rgb(137, 137, 225);
     border-radius: 1rem;
     transition: all 0.1s ease;
     width: 60%;
+}
+.finCompra button:hover{
+    background-color: white;
+    color: rgb(137, 137, 225);
+    border: 1px solid rgb(137, 137, 225);
 }
 
 /**** FIN CART ***/

@@ -8,11 +8,15 @@ export const CartContextProvider = ({children}) => {
     function isInCart(movieId) {
         return Boolean(carrito.find((movie) => movie.movie.id === movieId));
     }
-
+    
     function addMovie(movie, cant) {
         const estaAgregado = isInCart(movie.id);
+        
         if(estaAgregado) {
-            alert("Producto ya agregado")
+            setCarrito((prevState) => prevState.map((addedMovie) => addedMovie.movie.id === movie.id ? {
+                ...addedMovie, cantAgregada: addedMovie.cantAgregada + cant,
+            }: addedMovie)
+            );
         }else{
             setCarrito((prevState) => prevState.concat({movie, cantAgregada: cant}));
         }
@@ -25,7 +29,7 @@ export const CartContextProvider = ({children}) => {
     function clear() {
         setCarrito([]);
     }
-
+    
     return (
         <Context.Provider value={{isInCart, addMovie, removeMovie, clear, carrito}}>
             {children}
