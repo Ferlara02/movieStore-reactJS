@@ -8,7 +8,7 @@ export const peliculas = [
        background: "https://wallpaperaccess.com/full/7983307.jpg",
        img: "https://es.web.img3.acsta.net/r_1280_720/medias/nmedia/18/66/97/39/18965657.jpg",
        stock: 5,
-       link: "/item/1",
+       
        price: 5000 
     },
     {
@@ -20,7 +20,7 @@ export const peliculas = [
        background: "https://i.pinimg.com/originals/8d/64/3c/8d643cf5f2b8d126a8da2a11eccaadb9.png",
        img: "https://m.media-amazon.com/images/M/MV5BMzdmZjc4MTMtYmQwYy00ZjMwLWE0ODItYjU0NTc0NTVkOTAyXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_.jpg",
        stock: 9,
-       link: "/item/2",
+       
        price: 8000 
     },
     {
@@ -32,7 +32,7 @@ export const peliculas = [
        background: "https://wallpapercave.com/wp/wp9991399.jpg",
        img: "https://m.media-amazon.com/images/I/51uAv8PDJbL._AC_SY580_.jpg",
        stock: 4,
-       link: "/item/3",
+       
        price: 4500 
     },
     {
@@ -44,7 +44,7 @@ export const peliculas = [
       background: "https://m.media-amazon.com/images/M/MV5BMWEzNjBlNzAtZmU0Mi00MWYzLWExNjUtY2Y2NjgzMDg2MTVjXkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg",
       img: "https://www.themoviedb.org/t/p/original/qim3tyqmY2NzoVfdjxYW9MsZSLm.jpg",
       stock: 5,
-      link: "/item/4",
+      
       price: 3000 
    },
    {
@@ -56,7 +56,7 @@ export const peliculas = [
       background: "https://images5.alphacoders.com/118/1181492.jpg",
       img: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2021/08/dune-2433609.jpg?itok=cCnYTrFm",
       stock: 10,
-      link: "/item/5",
+      
       price: 4000 
    },
    {
@@ -68,7 +68,7 @@ export const peliculas = [
       background: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/02/X-poster-scaled.jpg?fit=2560%2C1465&ssl=1",
       img: "https://d135u4jtzauizi.cloudfront.net/X_Poster_A24.jpg",
       stock: 5,
-      link: "/item/6",
+      
       price: 8000 
    },
    {
@@ -80,7 +80,7 @@ export const peliculas = [
       background: "https://m.media-amazon.com/images/M/MV5BYTUwMmIzMmMtYzljNy00MWRkLTk0NTktNTM5MmU4MzJlMGNjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
       img: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/07/pearl-poster.png?ssl=1",
       stock: 10,
-      link: "/item/7",
+      
       price: 10000 
    },
    {
@@ -92,7 +92,7 @@ export const peliculas = [
       background: "https://www.thewrap.com/wp-content/uploads/2022/09/Bones-and-All.jpg",
       img: "https://m.media-amazon.com/images/M/MV5BMzk3Zjg4YmQtMzQyZi00ZDg3LWJhZjYtNmQ0MTE3NzIyNGYyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
       stock: 10,
-      link: "/item/8",
+      
       price: 10000 
    },
    {
@@ -104,7 +104,7 @@ export const peliculas = [
       background: "https://www.robleeper.com/imager/image/assets/img/blog/330/the-shining-wallpaper-preview_453f976d46f2777035a7291b08d9f5fc.jpg",
       img: "https://i.pinimg.com/736x/6d/46/53/6d46538d11c47f18bab0c7a8ca7810cd.jpg",
       stock: 8,
-      link: "/item/9",
+      
       price: 13000 
    },
    {
@@ -116,7 +116,7 @@ export const peliculas = [
       background: "https://www.filmlinc.org/wp-content/uploads/2015/07/autumnsonata3-1600x900-c-default.jpg",
       img: "https://cdn.shopify.com/s/files/1/1057/4964/products/Autumn-Sonata-Vintage-Movie-Poster-Original-1-Sheet-27x41.jpg?v=1651640514",
       stock: 5,
-      link: "/item/10",
+      
       price: 10000 
    },
    {
@@ -128,7 +128,7 @@ export const peliculas = [
       background: "https://i0.wp.com/www.vozactual.com/wp-content/uploads/2019/12/1234567.jpg?fit=800%2C445&ssl=1",
       img: "https://http2.mlstatic.com/D_NQ_NP_997608-MLM31220162618_062019-W.jpg",
       stock: 8,
-      link: "/item/11",
+      
       price: 8000 
    },
    {
@@ -140,7 +140,7 @@ export const peliculas = [
       background: "https://images8.alphacoders.com/874/874022.jpg",
       img: "https://http2.mlstatic.com/D_NQ_NP_842207-MLA26405185248_112017-O.jpg",
       stock: 12,
-      link: "/item/12",
+      
       price: 5000 
    },
    

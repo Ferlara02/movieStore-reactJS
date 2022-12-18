@@ -17,8 +17,6 @@ function Menu() {
                 
                 <Navbar.Collapse id="basic-navbar-nav" className='me'>
                     <Nav className="me-auto">
-                        <Link to="/" className="navItem">Home</Link>
-                        
                         <NavDropdown title="Categorías" id="basic-nav-dropdown" className='dropdown'>
                             <Link to="/category/drama" className="navItem">Drama</Link>
                             <Link to="/category/romance" className="navItem">
@@ -29,6 +27,7 @@ function Menu() {
                                 Terror
                             </Link>
                         </NavDropdown>
+                        <Link to="/" className="navItem">Home</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

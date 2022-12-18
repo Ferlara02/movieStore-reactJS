@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Movie Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto ha sido creado por [Fernando Lara](https://www.linkedin.com/in/fernando-agust%C3%ADn-lara-929539241/).
 
-## Available Scripts
+## Funcionalidad
 
-In the project directory, you can run:
+Este proyecto basado en React JS simula un eCommerce de Películas en Blu-Ray. Recopila un mock de películas y mapea cada item generando un Item list, contenido en un container homónimo. También contiene una funcionalidad para filtrar las películas de acuerdo al género, basandose en `react-router-dom`.
+Además, la opción de Agregar al carrito con React Context permite ir almacenando cada película en el cart, con la cantidad de Blu-ray´s elegida por el usuario a través de un item count.
 
 ### `npm start`
 

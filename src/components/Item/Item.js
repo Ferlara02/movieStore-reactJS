@@ -3,10 +3,9 @@ import "./Item.css";
 import 'react-toastify/dist/ReactToastify.css';
 import {Link} from "react-router-dom";
 const Item = ({pelicula, cantAgregada}) => {
-    
     return (
         <>
-        <Link className="link" to={pelicula.link}>
+        <Link className="link" to={(`/item/${pelicula.id}`)}>
             <div className="itemMovie">
                 <div className="posterDiv">
                     <img src={pelicula.img} className="posterMovie" />

@@ -4,13 +4,26 @@ import Spinner from 'react-bootstrap/Spinner';
 import { useEffect, useState } from "react";
 import {peliculas} from "../mocks/item.mock";
 import {useParams} from "react-router-dom";
-
+import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 function ItemListContainer(){
     const {genre} = useParams();
     const [peliculas2, setPeliculas2] = useState([]);
     const [hayPeliculas, setHayPeliculas] = useState(false);
 
+    
+    useEffect(() => {
+        const db = getFirestore();
+        const itemRef = doc(db, "items", "DqETASiJjfMcmj0rxycc");
+
+        getDoc(itemRef)
+            .then((snapshot) => {
+                if(snapshot.exists()) {
+                    setPeliculas2([{id: "DqETASiJjfMcmj0rxycc" , ...snapshot.data()}]);
+                }
+            });
+    }, []);
+    
     useEffect(() => {
         new Promise((resolve) => 
             setTimeout(() => {
