@@ -1,16 +1,33 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Item from "../components/Item/Item";
 import Layout from "../components/layout";
 import {Context}  from "../context/cartContext";
 import { TrashMovie } from "../components/TrashMovie";
+
+import { getFirestore, collection, addDoc, doc} from "firebase/firestore";
+
 const CartView = () => {
   const navigate = useNavigate();
   const { carrito, clear} = useContext(Context);
+  let total = 0;
+  carrito.forEach(movie => {
+      total += (movie.movie.price * movie.cantAgregada);
+  });
+
+  const db = getFirestore();
+  const comprador = {
+    nombre: "fer",
+    apellido: "kara",
+    mail: "aaa@aa"
+  };
+  
+
+
+  /***** Funciones DOM *****/
   const handleClear = () => {
     clear();
   }
-
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () =>{
@@ -22,25 +39,19 @@ const CartView = () => {
   function hoverClass() {
     return `${isHovering ? "textClear" : "hidden"}`
   }
+  /**** ****/
 
   const handleFinCompra = () => {
-    setTimeout(() => {
-      clear();
-      alert("Compra finalizada");
-      navigate("/");
-    }, 2000);
+    navigate("/checkout");
   };
 
-  let total = 0;
-  carrito.forEach(movie => {
-      total += (movie.movie.price * movie.cantAgregada);
-  });
+  
 
   return (
     <Layout>
       <div className="mainCart">
         {carrito.length === 0 ? (
-          <h1>No has agregado productos.</h1>
+          <h1>Carrito vacío. Puedes ver nuestras películas <Link to="/">AQUÍ.</Link></h1>
         ) : (
           <div className="container">
                 

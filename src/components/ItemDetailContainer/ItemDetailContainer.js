@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { peliculas } from "../../mocks/item.mock";
 import { useParams } from "react-router-dom";
-
+import {doc, getDocs, getDoc, getFirestore, collection, query, where} from "firebase/firestore";
 
 
 function ItemDetailContainer(){
@@ -12,16 +11,15 @@ function ItemDetailContainer(){
     const {id} = useParams();
 
     useEffect(()=>{
-        new Promise((resolve, reject) => setTimeout(()=> {
-            resolve(peliculas)
-        }, 2000))
-            .then((data) => {
-                const movie = data.find((pelicula) => pelicula.id === parseInt(id));
-                setMovie(movie);
-            })
-            .then((data) => {
-                setHayPeliculas(!data);
-            })
+        const db = getFirestore();
+        const itemRef = doc(db, "items", id);
+        getDoc(itemRef)
+            .then((snapshot) => {
+                if(snapshot.exists()) {
+                    setMovie({id: id, ...snapshot.data()});
+                    setHayPeliculas(true)
+                }
+            });
     }, [id]);
 
     return (

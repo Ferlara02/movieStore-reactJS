@@ -2,9 +2,8 @@ import ItemList from "./ItemList/ItemList.js";
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-bootstrap/Spinner';
 import { useEffect, useState } from "react";
-import {peliculas} from "../mocks/item.mock";
 import {useParams} from "react-router-dom";
-import {doc, getDoc, getFirestore} from "firebase/firestore";
+import {doc, getDocs, getDoc, getFirestore, collection, query, where} from "firebase/firestore";
 
 function ItemListContainer(){
     const {genre} = useParams();
@@ -14,17 +13,32 @@ function ItemListContainer(){
     
     useEffect(() => {
         const db = getFirestore();
-        const itemRef = doc(db, "items", "DqETASiJjfMcmj0rxycc");
+        //Para consultar todos los productos
 
-        getDoc(itemRef)
-            .then((snapshot) => {
-                if(snapshot.exists()) {
-                    setPeliculas2([{id: "DqETASiJjfMcmj0rxycc" , ...snapshot.data()}]);
-                }
+        const moviesCollection = collection(db, "items");
+        //Consultar productos con filtros
+        if(genre) {
+            const q = query(moviesCollection, where("genre", "==", genre));  
+            getDocs(q).then((snapshot) => {
+                const products = snapshot.docs.map((doc) => ({
+                    id: doc.id, 
+                    ...doc.data(),
+                }));
+                setPeliculas2(products);
+                setHayPeliculas(true);
             });
-    }, []);
+        }else {
+            getDocs(moviesCollection).then((snapshot) => {
+                const products = snapshot.docs.map((doc) => ({
+                    id: doc.id, ...doc.data()
+                }));
+                setPeliculas2(products);
+                setHayPeliculas(true);
+            });
+        }
+    }, [genre]);
     
-    useEffect(() => {
+    /*useEffect(() => {
         new Promise((resolve) => 
             setTimeout(() => {
                 resolve(peliculas);
@@ -43,7 +57,7 @@ function ItemListContainer(){
         .then(() => {
             setHayPeliculas(true);
         })
-    }, [genre]);
+    }, [genre]);*/
 
     return(
         <>

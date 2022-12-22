@@ -25,7 +25,7 @@ function ItemDetail({movie}){
         }else{
             toast.error('No hay más stock!', {
                 position: "bottom-right",
-                autoClose: 1000,
+                autoClose: 700,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -60,7 +60,7 @@ function ItemDetail({movie}){
             <div className="posterAndTitle">
                <img src={movie.img} className="posterMovie2"/>
                <h1> {movie.name} </h1>
-               <p>Género: {movie.genre}</p>
+               <p>Género: {movie.genre.toUpperCase()}</p>
                <p>Director: {movie.director}</p>
             </div>
             <div className="descriptionAndItemcount">
