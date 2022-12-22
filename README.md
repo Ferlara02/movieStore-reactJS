@@ -19,7 +19,7 @@ Una vez finalizada la promesa, al usuario se le devuelve el ID de la compra a tr
 * `HTML5 & CSS3`
 * `React JS`
    1. Context:
-        - Para: Persistencia en Cart & Counter en CartWidget
+        - Para: Persistencia en Cart & Counter en CartWidget 
    2. useState
    3. useEffect
    4. react-router-dom
