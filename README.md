@@ -2,6 +2,9 @@
 
 Este proyecto ha sido creado por [Fernando Lara](https://www.linkedin.com/in/fernando-agust%C3%ADn-lara-929539241/).
 
+##Navegabilidad
+![navegabilidad1](https://user-images.githubusercontent.com/80276829/209209696-6dc28afe-e56a-4b16-9025-cec2d2ee3943.gif)
+
 ## Funcionalidad
 
 Este proyecto basado en React JS simula un eCommerce de Películas en Blu-Ray. Recopila un mock de películas y mapea cada item generando un Item list, contenido en un container homónimo. También contiene una funcionalidad para filtrar las películas de acuerdo al género, basandose en `react-router-dom`.
