@@ -5,8 +5,6 @@ import Layout from "../components/layout";
 import {Context}  from "../context/cartContext";
 import { TrashMovie } from "../components/TrashMovie";
 
-import { getFirestore, collection, addDoc, doc} from "firebase/firestore";
-
 const CartView = () => {
   const navigate = useNavigate();
   const { carrito, clear} = useContext(Context);
@@ -14,15 +12,6 @@ const CartView = () => {
   carrito.forEach(movie => {
       total += (movie.movie.price * movie.cantAgregada);
   });
-
-  const db = getFirestore();
-  const comprador = {
-    nombre: "fer",
-    apellido: "kara",
-    mail: "aaa@aa"
-  };
-  
-
 
   /***** Funciones DOM *****/
   const handleClear = () => {
@@ -44,8 +33,6 @@ const CartView = () => {
   const handleFinCompra = () => {
     navigate("/checkout");
   };
-
-  
 
   return (
     <Layout>

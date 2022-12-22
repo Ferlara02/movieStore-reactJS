@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-bootstrap/Spinner';
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom";
-import {doc, getDocs, getDoc, getFirestore, collection, query, where} from "firebase/firestore";
+import {getDocs, getFirestore, collection, query, where} from "firebase/firestore";
 
 function ItemListContainer(){
     const {genre} = useParams();
@@ -23,10 +23,10 @@ function ItemListContainer(){
                 const products = snapshot.docs.map((doc) => ({
                     id: doc.id, 
                     ...doc.data(),
-                }));
+                }))
                 setPeliculas2(products);
                 setHayPeliculas(true);
-            });
+            }).catch(error => console.log(error));
         }else {
             getDocs(moviesCollection).then((snapshot) => {
                 const products = snapshot.docs.map((doc) => ({
@@ -38,27 +38,6 @@ function ItemListContainer(){
         }
     }, [genre]);
     
-    /*useEffect(() => {
-        new Promise((resolve) => 
-            setTimeout(() => {
-                resolve(peliculas);
-            }, 2000)
-        )
-        .then((data) => {
-            if(genre){
-                const genres = data.filter((pelicula)=> pelicula.genre === genre);
-                setPeliculas2(genres);
-                
-            }else {
-                setPeliculas2(data);
-            }
-        })
-        
-        .then(() => {
-            setHayPeliculas(true);
-        })
-    }, [genre]);*/
-
     return(
         <>
         <div className="main">

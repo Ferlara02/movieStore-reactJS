@@ -1,11 +1,11 @@
 import "./IDC.css"
 import ItemCount from "../ItemCount/ItemCount";
 import { ToastContainer, toast } from 'react-toastify';
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../context/cartContext";
 function ItemDetail({movie}){
-    const {addMovie, isInCart, carrito} = useContext(Context);
+    const {addMovie, isInCart} = useContext(Context);
     const navigate = useNavigate();
     const [stock, setStock] = useState(movie.stock);
     const [count, setCount] = useState(1);

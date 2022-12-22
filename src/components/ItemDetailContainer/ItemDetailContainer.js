@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import {doc, getDocs, getDoc, getFirestore, collection, query, where} from "firebase/firestore";
+import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 
 function ItemDetailContainer(){
@@ -19,7 +19,8 @@ function ItemDetailContainer(){
                     setMovie({id: id, ...snapshot.data()});
                     setHayPeliculas(true)
                 }
-            });
+            })
+            .catch(error => console.error(error));
     }, [id]);
 
     return (

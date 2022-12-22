@@ -15,19 +15,10 @@ const Checkout = () =>{
        total += (movie.movie.price * movie.cantAgregada);
     });
     
-    
     const db = getFirestore();
     const [id2, setId2] = useState("");
     const [status, setStatus] = useState(false);
 
-    // const mostrarAlerta = () => {
-    //     Swal.fire({
-    //         title: "Compra Finalizada!",
-    //         text: `ID de la compra: ${id}`,
-    //         icon: "success",
-    //         confirmButtonText: "Aceptar"
-    //     });
-    // }
     const finalizarCompra = (event) => {
         event.preventDefault();
 
