@@ -1,5 +1,4 @@
 import "./Item.css";
-
 import 'react-toastify/dist/ReactToastify.css';
 import {Link} from "react-router-dom";
 const Item = ({pelicula, cantAgregada}) => {

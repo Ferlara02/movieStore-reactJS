@@ -25,7 +25,7 @@ Una vez finalizada la promesa, al usuario se le devuelve el ID de la compra a tr
    4. react-router-dom
 * `Firebase - Firestore`
     - Métodos:
-        - getDoc, getDocs, addDoc, collection, doc, getFirestore, updateDoc, serverTimestamp (para indicar la fecha y hora de la compra).
+        - getDoc, getDocs, addDoc, collection, doc, getFirestore, updateDoc, query, where,serverTimestamp (para indicar la fecha y hora de la compra).
     - Para: 
         - Incorporar una base de datos no relacional de Películas.
         - Modificar una colección de ventas, agregando un documento con datos del usuario y los items seleccionados por cada compra.
