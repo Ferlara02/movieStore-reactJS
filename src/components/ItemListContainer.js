@@ -18,7 +18,8 @@ function ItemListContainer(){
         const moviesCollection = collection(db, "items");
         //Consultar productos con filtros
         if(genre) {
-            const q = query(moviesCollection, where("genre", "==", genre));  
+            const q = query(moviesCollection, where("genre", "==", genre));
+            setHayPeliculas(false); //Para que al pasar de una categoría a otra el loading funcione.
             getDocs(q).then((snapshot) => {
                 const products = snapshot.docs.map((doc) => ({
                     id: doc.id, 
